@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GABUT</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <!-- NAVIGATION BAR -->
+        <nav class="top">
+            <a href="#">HOME</a>
+            <a href="Port.html">POTOFOLIO</a>
+            <a href="about.html">ABOUT THIS WEB</a>
+            <a href="about1.html">ABOUT ME</a>
+        </nav>
+        <nav class="bottom">
+            <a onclick="darkMode()">MODE</a>
+        </nav>
+        <!-- NAVIGATION BAR -->
+        <h1>WELCOME TO MY WEBSITE</h1>
+    </div>
+    <script>
+        let body = document.body;
+
+        function darkMode() {
+            console.log('halo')
+            body.classList.toggle("dark");
+        }
+    </script>
 </body>
 </html>
