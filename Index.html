@@ -5,19 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GABUT</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node.js">
 </head>
 <body>
     <div class="container">
         <!-- NAVIGATION BAR -->
         <nav class="top">
-            <a href="#">HOME</a>
-            <a href="Port.html">POTOFOLIO</a>
-            <a href="about.html">ABOUT THIS WEB</a>
-            <a href="about1.html">ABOUT ME</a>
+            <a onclick="Home()">HOME</a>
+            <a href="AboutMe.html">POTOFOLIO</a>
+            <a href="AboutWeb.html">ABOUT THIS WEB</a>
+            <a href="AboutMe.html">ABOUT ME</a>
+            <a href="Googlo.html">GOOGLO</a>
+
+            <nav class="right">
+                <p></p>
+                <a href="https://instagram.com/ayvsm?igshid=OGQ5ZDc2ODk2ZA==">
+                    <img src="https://th.bing.com/th?id=ODLS.2c4a26df-86f7-4b62-8221-97f8afb20165&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="">
+                </a>
+            </nav>
+            <nav class="right1">
+                <p></p>
+                <a href="https://www.facebook.com/profile.php?id=100074783612283&mibextid=9R9pXO">
+                    <img src="https://th.bing.com/th?id=ODLS.7d3063c3-cd17-4792-8d4f-4e98c892a389&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="">
+                </a>
+            </nav>
         </nav>
         <nav class="bottom">
             <a onclick="darkMode()">MODE</a>
         </nav>
+        <div class="box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
         <!-- NAVIGATION BAR -->
         <h1>WELCOME TO MY WEBSITE</h1>
     </div>
@@ -27,6 +66,10 @@
         function darkMode() {
             console.log('halo')
             body.classList.toggle("dark");
+        }
+
+        function Home() {
+            alert('You are already at HOME!')
         }
     </script>
 </body>

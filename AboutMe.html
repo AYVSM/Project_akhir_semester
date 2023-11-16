@@ -4,55 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>About Me</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        nav {
-            height: 70px;
-            position: fixed;
-            background-color: black;
-            padding: 15px;
-            width: 100%;
-            top: 0;
-            margin: auto;
-        }
-
-        nav a {
-            margin: auto;
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        nav a:hover {
-            cursor: pointer;
-            background-color: aqua;
-            transition: background-color .5s ease-in-out;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100vh;
-        }
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleMe.css">
 </head>
 <body>
+
     <div class="container">
         <nav>
-            <a href="bikinbikin.html">BACK TO HOME</a>
+            <a href="Index.html">BACK TO HOME</a>
+            <a class="right" href="https://github.com/AYVSM?tab=repositories"><img src="https://th.bing.com/th?id=ODLS.00dbbbda-1b83-40e7-ac3c-2ff2a73b245f&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt=""></a>
         </nav>
-        
-        <h1>About Me</h1>
-        <img src="" alt="">
     </div>
+    <div class="card">
+        <div class="imgBox">
+            <div class="bark"></div>
+            <img src="" alt="">
+        </div>
+
+        <div class="details">
+            <h4 class="color1">About</h4>
+            <h4 class="color2 margin">Me</h4>
+            <p>Nama :Albert Valentino😎</p>
+            <p>Kelas :10.1☀️</p>
+            <p>Umur :15 Tahun🌍</p>
+            <p>Belajar: HTML , CSS , dan JAVASCRIPT🚩</p>
+            <p class="text-right">Ty for Jonathan Alvino</p>
+        </div>
+    </div>
+
+    <div class="circle">
+        <div class="carousel">
+            <div class="carousel-slide"></div>
+            <div class="carousel-slide"></div>
+            <div class="carousel-slide"></div>
+        </div>
+    </div>
+    
+    <div class="right">
+        <div class="card1">
+            <div class="imgBox1">
+                <div class="bark1"></div>
+                <img src="" alt="">
+            </div>
+    
+            <div class="details1">
+                <h4 class="color11">My</h4>
+                <h4 class="color2 margin">Portofolio</h4>
+                <p>Nama :Albert Valentino😎</p>
+                <p>Kelas :10.1☀️</p>
+                <p>Umur :15 Tahun🌍</p>
+                <p>Project yang telah saya buat:</p>
+                <p>https://github.com/AYVSM?tab=repositories</p>
+                <p class="text-right1">Ty for Jonathan Alvino</p>
+            </div>
+        </div>
+    </div>
+    <!-- <nav class="bottom">
+        <a onclick="darkMode()">MODE</a>
+    </nav> -->
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    
+    <h1>About Me</h1>
+    <img src="" alt="">
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll(".carousel-slide");
+            let currentSlideIndex = 0;
+
+            function showSlide(index) {
+                slides[currentSlideIndex].style.display = "none";
+                currentSlideIndex = (index + slides.length) % slides.length;
+                slides[currentSlideIndex].style.display = "block";
+            }
+
+            function nextSlide() {
+                showSlide(currentSlideIndex + 1);
+            }
+
+            showSlide(currentSlideIndex);
+
+            setInterval(nextSlide, 3000);
+        })
+</script>
 </html>

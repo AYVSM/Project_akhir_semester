@@ -1,15 +1,46 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    height: 50rem;
-    
+a.right img {
+    float: right;
+    background-color: #000;
+}
+
+a.right img:hover {
+    background-color: whitesmoke;
+    transition: background-color .5s ease-in-out ;
+}
+
+nav {
+    height: 70px;
+    position: fixed;
+    background-color: black;
+    padding: 15px;
+    width: 100%;
+    top: 0;
+    margin: auto;
+    z-index: 1000;
+}
+
+nav a {
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a:hover {
+    cursor: pointer;
+    /* background-color: aqua; */
+    transition: background-color .5s ease-in-out;
 }
 
 .container {
+    /* height: 300px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,79 +48,303 @@ body {
     height: 100vh;
 }
 
-nav.top {
-    display: flex;
-    float: left;
-    height: 70px;
-    width: 100%;
-    background-color: black;
+/* Style Card */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+body {
+    font-family: 'Indie Flower', cursive !important;
+    background: #FDE3A7;
+    margin: 0px;
+    padding: 0px;
+}
+
+::selection {
+    background: transparent;
+}
+
+h4 {
+    font-size: 26px;
+    line-height: 1px;
+    font-family: 'Amatic SC', cursive !important;
+}
+
+.color1{
+    color: #1BBC9B;
+    margin: 34.580px 0;
+}
+.color2{
+    color: #C0392B;
+    margin: 34.580px 0;
+}
+
+.card {
+    color: #013243;
     position: fixed;
+    top: 60%;
+    left: 15%;
+    width: 300px;
+    height: 400px;
+    background: #e0e1dc;
+    transform-style: preserve-3d;
+    /* transform: translate(-50%,-50%) perspective(2000px); */
+    transform: translate(-50%,-50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+    transition: 1s;
+    z-index: 1000;
+}
+
+.card:hover {
+    /* transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2); */
+    transform: translate(-50%,-50%) perspective(1000px) rotate(0deg) scale(1.2);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #BAC1BA;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
+}
+
+.card::after {
+    content: '';
+    position: static;
     top: 0;
-    padding: 15px;
-    margin: auto;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #92A29C;
+    transform-origin: left;
+    transform: skewY(-45deg);
 }
 
-nav.top a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    font-weight: 500;
-    margin  : auto 30px;
-}
-
-nav.bottom {
+.card .imgBox {
     width: 100%;
-    background-color: black;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: .7s;
+}
+
+.card .bark {
+    position: absolute;
+    background: #e0e1dc;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .7s;
+}
+
+.card .imgBox img {
+    min-width: 300px;
+    min-height: 400px;
+    background-image: url(assets/AboutMe.jpg);
+    background-size: cover;
+}
+
+.card:hover .imgBox {
+    /* transform: rotateY(-180deg); */
+    transform: rotateX(0deg);
+    opacity: 0;
+}
+
+.card:hover .bark {
+    opacity: 0;
+    transition: .6s;
+    box-shadow: 300px 200px 100px rgba(0,0,0,-4) inset;
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    z-index: -1;
+    margin-top: 70px;
+}
+
+.card .details p {
+    font-size: 15px;
+    line-height: 5px;
+    transform: rotate(0deg);
+    margin: 15px 0;
+    padding: 0 0 0 20px;
+}
+
+.card .details h4 {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+    margin: 15px 0;
+}
+
+h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Style Card */
+
+/* Style Card 1 */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+::selection {
+    background: transparent;
+}
+
+h4 {
+    font-size: 26px;
+    line-height: 1px;
+    font-family: 'Amatic SC', cursive !important;
+}
+
+.color11{
+    color: #1BBC9B;
+    margin: 34.580px 0;
+}
+.color2{
+    color: #C0392B;
+    margin: 34.580px 0;
+}
+
+.card1 {
+    color: #013243;
     position: fixed;
-    bottom: 0;
-    padding: 15px;
+    top: 60%;
+    left: 85%;
+    width: 300px;
+    height: 400px;
+    background: #e0e1dc;
+    transform-style: preserve-3d;
+    /* transform: translate(-50%,-50%) perspective(2000px); */
+    transform: translate(-50%,-50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
+    transition: 1s;
+    z-index: 1000;
 }
 
-nav.bottom a {
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    font-weight: 500;
+.card1:hover {
+    /* transform: translate(-50%,-50%) perspective(2000px) rotate(15deg) scale(1.2); */
+    transform: translate(-50%,-50%) perspective(1000px) rotate(0deg) scale(1.2);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,.5), 0 10px 100px rgba(0,0,0,.5);
 }
 
-nav.top a:hover {
-    cursor: pointer;
-    /* background-color: yellowgreen; */
-    transition: background-color .5s ease-in-out;
+.card1:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #BAC1BA;
+    transform-origin: bottom;
+    transform: skewX(-45deg);
 }
 
-.dark {
-    background-color: black;
-    color: white;
+.card1::after {
+    content: '';
+    position: static;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 100%;
+    background: #92A29C;
+    transform-origin: left;
+    transform: skewY(-45deg);
 }
 
-.blue {
-    background-color: white;
-    color: white;
+.card1 .imgBox1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-origin: left;
+    transition: .7s;
 }
 
-nav a {
-    color: white;
-    font-style: none;
+.card1 .bark1 {
+    position: absolute;
+    background: #e0e1dc;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .7s;
 }
 
-nav.top p {
-    color: white;
-    font-size: 10px;
+.card1 .imgBox1 img {
+    min-width: 300px;
+    min-height: 400px;
+    background-image: url(assets/MyPortofolio.jpg);
+    background-size: cover;
 }
 
-.container h1 {
-    font-size: 80px;
+.card1:hover .imgBox1 {
+    /* transform: rotateY(-180deg); */
+    transform: rotateX(0deg);
+    opacity: 0;
 }
 
-/* Codingan Background */
+.card1:hover .bark1 {
+    opacity: 0;
+    transition: .6s;
+    box-shadow: 300px 200px 100px rgba(0,0,0,-4) inset;
+}
+
+.card1 .details1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 0 0 10px;
+    z-index: -1;
+    margin-top: 70px;
+}
+
+.card1 .details1 p {
+    font-size: 15px;
+    line-height: 5px;
+    transform: rotate(0deg);
+    margin: 15px 0;
+    padding: 0 0 0 20px;
+}
+
+.card1 .details1 h4 {
+    text-align: center;
+}
+
+.text-right1 {
+    text-align: right;
+    margin: 15px 0;
+}
+
+h1 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Style Card 1 */
+
+/* Background */
 body {
     background-color: #03071c;
     height: 100vh;
     overflow: hidden;
 }
 
-.container h1 {
+/* .container h1 {
     color: #fff;
     position: absolute;
     top: 50%;
@@ -99,7 +354,7 @@ body {
     z-index: 1;
     font-size: 70px;
     text-align: center;
-}
+} */
 
 .box ul li:nth-child(1) {
     position: absolute;
@@ -453,4 +708,57 @@ body {
         bottom: 100vh;
     }
 }
-/* Codingan Background */
+/* Background */
+
+/* Circle */
+.circle {
+    position: fixed;
+    top: 30%;
+    left: 38%;
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+    background-color: rgb(35, 13, 160);
+    z-index: 1000;
+}
+
+.carousel {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    height: 290px;
+    width: 290px;
+    border-radius: 145px;
+    background-color: white;
+    z-index: 1000;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    animation: slide 3s ease infinite;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel .carousel-slide:nth-child(1) {
+    background-image: url('assets/Patrick 1.jpeg');
+}
+
+.carousel .carousel-slide:nth-child(2) {
+    background-image: url('assets/Patrick 2.jpeg');
+}
+
+.carousel .carousel-slide:nth-child(3) {
+    background-image: url('assets/Patrick 3.jpeg');
+}
+
+@keyframes slide {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+/* circle */
