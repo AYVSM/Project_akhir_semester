@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Tugas</title>
+    <link rel="stylesheet" href="styleLog.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <div class="container">
+    <!-- Background Animated -->
+        <div class="content">
+            <div id="root">
+                <div id="site">
+                    <!-- NAVIGATION BAR(BAGIAN ATAS) -->
+                    <div class="container-navbar">
+                        <ul class="ul-navbar">
+                           <a href="Index.html">Back To Home</a> 
+                           <button class="Logout" onclick="onLogout()" id="logoutButton">Back to Login</button>
+                        </ul>
+                    </div>
+                    <!-- NAVIGATION BAR(BAGIAN ATAS) SELESAI -->
+
+                    <!-- CONTENT 1(ISI) -->
+                    <div class="container-content">
+                    </div>
+                    <!-- CONTENT 1(ISI) SELESAI -->
+
+                    <!-- FOOTER(BAGIAN BAWAH) -->
+                    <footer>
+                    <h1 class="h1-footer">Halo</h1>
+                    </footer>
+                    <!-- FOOTER(BAGIAN BAWAH) SELESAI -->
+            </div>
+            <input type="text" placeholder="Login" id="usernameInput" />
+                    <input type="password" placeholder="Password" id="passwordInput" />
+                    <button onclick="onLogin()" id="loginButton">Enter</button>
+                    <button onclick="onLogout()" id="logoutButton">Back to Login</button>
+                    <br>
+                        <div class="container-1" id="admin">
+                            <!-- <h1>Home</h1> -->
+                            <button onclick="onLogout()" id="logoutButton">Back to Login</button>
+                            <!-- <h1>Back</h1> -->
+                            </div>
+                            <!-- <h1 id="admin">LOGIN SEBAGAI ADMIN</h1> -->
+                            <h1 id="basic">LOGIN SEBAGAI USER BIASA</h1>
+                            </div>  
+                        </div>
+
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- <div id="root">
+        <input type="text" placeholder="Page" id="usernameInput" />
+        <input type="password" placeholder="Password" id="passwordInput" />
+        <button onclick="onLogin()" id="loginButton">Enter</button>
+        <button onclick="onLogout()" id="logoutButton">Back to Menu</button>
+        <br>
+        <div class="container-1" id="admin">
+            <div>
+                <nav>
+                    <a href="#home">home</a>
+                    <a href="#about">about</a>
+                    <a href="#contact">contact</a>
+                </nav>
+                <a href="#login">login</a>
+                <div class="clear"></div>
+            </div>
+    
+            <h1>Home</h1>
+            <button onclick="onLogout()" id="logoutButton">Back to Menu</button>
+            <h1>Back</h1>
+        </div>
+        <!-- <h1 id="admin">LOGIN SEBAGAI ADMIN</h1> -->
+        <!-- <h1 id="basic">LOGIN SEBAGAI USER BIASA</h1>
+    </div> -->
+    </div>
+    <script type="application/javascript">
+        // belajar sedikit javascript
+        // const myName = "Albert Valentino";
+        // const myHobby = "Playing chess and Mathematic";
+
+        // let root = document.getElementById('root');
+        // root.textContent = myName + ' ' + myHobby;
+        // root.style.backgroundColor = "tomato";
+        // root.style.color = "white";
+        // root.style.fontSize = "2em";
+        // root.style.textAlign = "center";
+        // root.style.height = "100vh";
+        
+        // CODINGAN BUAT LOGIN DAN LOGOUT
+        let site = document.getElementById('site');
+        let usernameInput = document.getElementById('usernameInput');
+        let passwordInput = document.getElementById('passwordInput');
+        let loginButton = document.getElementById('loginButton');
+        let logoutButton = document.getElementById('logoutButton');
+        let admin = document.getElementById('admin');
+        let basic = document.getElementById('basic');
+
+        site.style.display = "none";
+        admin.style.display = "none";
+        basic.style.display = "none";
+        logoutButton.style.display = "none";
+
+        function onLogin(){
+            localStorage.setItem("username", usernameInput.value);
+            logoutButton.style.display = "block";
+            if(usernameInput.value == "Login" && passwordInput.value == "123123") {
+                localStorage.setItem("role", "HomePage");
+                usernameInput.style.display = "none";
+                passwordInput.style.display = "none";
+                loginButton.style.display = "none";
+                basic.style.display = "none";
+                admin.style.display = "block";
+                site.style.display = "block"
+            }else {
+                usernameInput.style.display = "none";
+                passwordInput.style.display = "none";
+                loginButton.style.display = "none";
+                localStorage.setItem("role", "basic");
+                admin.style.display = "none";
+                basic.style.display = "block";
+                site.style.display = "none"
+            }
+        }
+
+        if(localStorage.getItem('username')){
+            usernameInput.style.display = "none";
+            passwordInput.style.display = "none";
+            loginButton.style.display = "none";
+            logoutButton.style.display = "block";
+            if(localStorage.getItem('role') == "HomePage"){
+                basic.style.display = "none";
+                admin.style.display = "block";
+                site.style.display = "block";
+            }else {
+                admin.style.display = "none";
+                basic.style.display = "block";
+                site.style.display = "none"
+            }
+        }
+
+        function onLogout() {
+            localStorage.clear();
+            location.reload();
+        }
+    </script>
+</body>
+</html>
